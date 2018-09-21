@@ -31,7 +31,7 @@ but.onclick = function() {
     }else{ document.getElementById('email-label').innerHTML = "";}
     
     var password : string = document.forms["form"]["password"].value;
-    regexp = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/);
+    regexp = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/);
     isValid = regexp.test(password);
     if(!isValid){
         document.getElementById('password-label').innerHTML = "X";
